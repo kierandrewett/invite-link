@@ -3,9 +3,12 @@ import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
+  
+  const urlCode = new URL(window.location.href).searchParams.get("code");
+  
   return (
     <main>
-      <h1>🤍</h1>
+      <script>window.location.href = 'https://discord.gg/{urlCode}'</script>
     </main>
   );
 }
